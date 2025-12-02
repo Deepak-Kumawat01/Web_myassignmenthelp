@@ -254,9 +254,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-header">
             <div className="section-eyebrow">FAQs</div>
-            <h2 className="section-title">
-              Questions Students Usually Ask Us
-            </h2>
+            <h2 className="section-title">Questions Students Usually Ask Us</h2>
           </div>
 
           <div className="faq-list">

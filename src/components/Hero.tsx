@@ -139,7 +139,6 @@ export default function Hero() {
           style={{
             flex: 1,
             background: 'white',
-            padding: '1.5rem',
             borderRadius: '8px',
             boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
           }}
@@ -148,163 +147,165 @@ export default function Hero() {
             style={{
               background: '#0d1b3b',
               color: 'white',
-              padding: '0.7rem 1rem',
-              borderRadius: '6px',
+              padding: '1rem 1rem',
+              borderTopLeftRadius: '6px',
+              borderTopRightRadius: '6px',
               fontWeight: 600,
               marginBottom: '1rem',
             }}
           >
             Hire An Assignment Helper
           </div>
-
-          {/* 2-column form grid */}
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: '1rem',
-            }}
-          >
-            {/* NAME */}
-            <div className="form-group">
-              <label htmlFor="name" className="form-label">
-                Your Name
-              </label>
-              <input
-                id="name"
-                className="form-input"
-                placeholder="Enter Your Name"
-              />
-            </div>
-
-            {/* EMAIL */}
-            <div className="form-group">
-              <label htmlFor="email" className="form-label">
-                Your Email
-              </label>
-              <input
-                id="email"
-                className="form-input"
-                placeholder="Enter Your Email"
-              />
-            </div>
-
-            {/* COUNTRY CODE */}
-            <div className="form-group">
-              <label htmlFor="countryCode" className="form-label">
-                Country Code
-              </label>
-              <select id="countryCode" className="form-input">
-                <option>Malaysia (+60)</option>
-                <option>India (+91)</option>
-              </select>
-            </div>
-
-            {/* CONTACT */}
-            <div className="form-group">
-              <label htmlFor="contact" className="form-label">
-                Contact Number
-              </label>
-              <input
-                id="contact"
-                className="form-input"
-                placeholder="Enter Contact"
-              />
-            </div>
-
-            {/* PAPER LENGTH */}
-            <div className="form-group">
-              <label className="form-label">Paper Length</label>
-              <input className="form-input" placeholder="Paper length" />
-            </div>
-
-            {/* EDUCATION LEVEL */}
-            <div className="form-group">
-              <label htmlFor="education" className="form-label">
-                Education Level
-              </label>
-              <select id="education" className="form-input">
-                <option>Select Level</option>
-              </select>
-            </div>
-
-            {/* DEADLINE */}
-            <div className="form-group">
-              <label className="form-label">Deadline</label>
-              <input className="form-input" placeholder="Deadline" />
-            </div>
-
-            {/* SUBJECT */}
-            <div className="form-group">
-              <label className="form-label">Subject Name</label>
-              <input className="form-input" placeholder="Subject Name" />
-            </div>
-
-            {/* REFERENCING STYLE */}
-            <div className="form-group">
-              <label htmlFor="refStyle" className="form-label">
-                Referencing Style
-              </label>
-              <select id="refStyle" className="form-input">
-                <option>Select Style</option>
-              </select>
-            </div>
-
-            {/* PAPER TYPE */}
-            <div className="form-group">
-              <label htmlFor="paperType" className="form-label">
-                Paper Type
-              </label>
-              <select id="paperType" className="form-input">
-                <option>Select Type</option>
-              </select>
-            </div>
-          </div>
-
-          {/* TEXTAREA */}
-          <div className="form-group" style={{ marginTop: '1rem' }}>
-            <label className="form-label">Your Question</label>
-            <textarea
-              className="form-input"
-              placeholder="Enter Question"
-              style={{ height: '90px' }}
-            ></textarea>
-          </div>
-
-          {/* FILE UPLOAD */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              marginTop: '1rem',
-            }}
-          >
-            <div className="form-group" style={{ margin: 0 }}>
-              <label htmlFor="uploadFile" className="form-label">
-                Upload File
-              </label>
-              <input id="uploadFile" type="file" />
-            </div>
-
-            <button className="btn btn-outline">Add More</button>
-          </div>
-
-          {/* Submit */}
-          <div style={{ textAlign: 'center', marginTop: '1.2rem' }}>
-            <button
+          <div style={{ padding: '0 1rem 1rem 1rem' }}>
+            {/* 2-column form grid */}
+            <div
               style={{
-                background: '#d4422e',
-                color: 'white',
-                padding: '0.7rem 2rem',
-                borderRadius: '6px',
-                border: 'none',
-                cursor: 'pointer',
-                fontSize: '1rem',
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr',
+                gap: '1rem',
               }}
             >
-              Order Now
-            </button>
+              {/* NAME */}
+              <div className="form-group">
+                <label htmlFor="name" className="form-label">
+                  Your Name
+                </label>
+                <input
+                  id="name"
+                  className="form-input"
+                  placeholder="Enter Your Name"
+                />
+              </div>
+
+              {/* EMAIL */}
+              <div className="form-group">
+                <label htmlFor="email" className="form-label">
+                  Your Email
+                </label>
+                <input
+                  id="email"
+                  className="form-input"
+                  placeholder="Enter Your Email"
+                />
+              </div>
+
+              {/* COUNTRY CODE */}
+              <div className="form-group">
+                <label htmlFor="countryCode" className="form-label">
+                  Country Code
+                </label>
+                <select id="countryCode" className="form-input">
+                  <option>Malaysia (+60)</option>
+                  <option>India (+91)</option>
+                </select>
+              </div>
+
+              {/* CONTACT */}
+              <div className="form-group">
+                <label htmlFor="contact" className="form-label">
+                  Contact Number
+                </label>
+                <input
+                  id="contact"
+                  className="form-input"
+                  placeholder="Enter Contact"
+                />
+              </div>
+
+              {/* PAPER LENGTH */}
+              <div className="form-group">
+                <label className="form-label">Paper Length</label>
+                <input className="form-input" placeholder="Paper length" />
+              </div>
+
+              {/* EDUCATION LEVEL */}
+              <div className="form-group">
+                <label htmlFor="education" className="form-label">
+                  Education Level
+                </label>
+                <select id="education" className="form-input">
+                  <option>Select Level</option>
+                </select>
+              </div>
+
+              {/* DEADLINE */}
+              <div className="form-group">
+                <label className="form-label">Deadline</label>
+                <input className="form-input" placeholder="Deadline" />
+              </div>
+
+              {/* SUBJECT */}
+              <div className="form-group">
+                <label className="form-label">Subject Name</label>
+                <input className="form-input" placeholder="Subject Name" />
+              </div>
+
+              {/* REFERENCING STYLE */}
+              <div className="form-group">
+                <label htmlFor="refStyle" className="form-label">
+                  Referencing Style
+                </label>
+                <select id="refStyle" className="form-input">
+                  <option>Select Style</option>
+                </select>
+              </div>
+
+              {/* PAPER TYPE */}
+              <div className="form-group">
+                <label htmlFor="paperType" className="form-label">
+                  Paper Type
+                </label>
+                <select id="paperType" className="form-input">
+                  <option>Select Type</option>
+                </select>
+              </div>
+            </div>
+
+            {/* TEXTAREA */}
+            <div className="form-group" style={{ marginTop: '1rem' }}>
+              <label className="form-label">Your Question</label>
+              <textarea
+                className="form-input"
+                placeholder="Enter Question"
+                style={{ height: '90px' }}
+              ></textarea>
+            </div>
+
+            {/* FILE UPLOAD */}
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                marginTop: '1rem',
+              }}
+            >
+              <div className="form-group" style={{ margin: 0 }}>
+                <label htmlFor="uploadFile" className="form-label">
+                  Upload File
+                </label>
+                <input id="uploadFile" type="file" />
+              </div>
+
+              <button className="btn btn-outline">Add More</button>
+            </div>
+
+            {/* Submit */}
+            <div style={{ textAlign: 'center', marginTop: '1.2rem' }}>
+              <button
+                style={{
+                  background: '#d4422e',
+                  color: 'white',
+                  padding: '0.7rem 2rem',
+                  borderRadius: '6px',
+                  border: 'none',
+                  cursor: 'pointer',
+                  fontSize: '1rem',
+                }}
+              >
+                Order Now
+              </button>
+            </div>
           </div>
         </div>
       </div>
