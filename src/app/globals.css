@@ -574,9 +574,8 @@ p {
   display: none;
   z-index: 50;
   margin-top: 0px; 
-}
+} 
 
-/* Show dropdown on hover */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
