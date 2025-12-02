@@ -122,7 +122,6 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* ORDER NOW (RIGHT SIDE) */}
         <div className="header-cta">
           <Link href="/contact">
             <button className="order-btn">Order Now &gt;&gt;</button>
