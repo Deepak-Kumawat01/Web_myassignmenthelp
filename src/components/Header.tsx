@@ -36,7 +36,8 @@ export default function Header() {
               Services <span style={{ fontSize: '12px' }}>▾</span>
             </span>
 
-            <div className="absolute top-full left-0 p-4 w-48 bg-white border border-gray-200 rounded shadow-lg z-10 display-none dropdown-menu">  
+            <div className="absolute top-full left-0 p-4 w-48 bg-white border border-gray-200 rounded shadow-lg z-10 dropdown-menu">
+
 
               <Link href="/services/essay-writing" className="dropdown-item">
                 Essay Writing Service
