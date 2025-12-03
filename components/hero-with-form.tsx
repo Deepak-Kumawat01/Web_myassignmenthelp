@@ -192,11 +192,7 @@ export default function HeroWithForm() {
                 </span>
 
                 {/* ACTUAL FILE INPUT HIDDEN */}
-                <input
-                  type="file"
-                  className="hidden"
-                  onChange={(e) => console.log(e.target.files[0])}
-                />
+                <input type="file" className="hidden" />
 
                 {/* FILE NAME TEXT */}
                 <span className="px-3 text-[14px] text-[#212529]">
