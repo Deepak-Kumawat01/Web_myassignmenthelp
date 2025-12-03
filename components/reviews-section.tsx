@@ -1,43 +1,114 @@
+'use client'
+
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useEffect, useState } from 'react'
+
 export default function ReviewsSection() {
   const reviews = [
     {
-      name: "Ahmed Hassan",
-      rating: 4.5,
-      text: "Great assignment help service! The writers are very professional and deliver high-quality work on time. Highly recommended!",
+      name: 'Imran Soon',
+      location: 'Shah Alam',
+      img: '/82.jpg',
+      text: 'Justifiable prices! Initially, I thought the amount taken was a little too much, however, after getting my services done on time and with 100% accuracy.',
     },
     {
-      name: "Sarah Johnson",
-      rating: 5,
-      text: "I was struggling with my thesis and My Assignment Help Malaysia saved me! The quality is excellent and they meet deadlines.",
+      name: 'Nur Abidin',
+      location: 'Alor Setar',
+      img: '/83.jpg',
+      text: 'You guys did a great job! I am very impressed with the way the job was done on the assignment. Excellent work! Thank you, now I think the fee taken was justifiable.',
     },
     {
-      name: "Priya Singh",
-      rating: 4.8,
-      text: "Outstanding service! My assignment was completed perfectly. The support team was very helpful throughout the process.",
+      name: 'Farah Wong',
+      location: 'Kuala Lumpur',
+      img: '/84.jpg',
+      text: 'Qualified professionals in all fields. I am glad I sought help from you guys. Excellent work! Thank you.',
+    },
+    {
+      name: 'Daniel Lee',
+      location: 'Johor Bahru',
+      img: '/85.jpg',
+      text: 'Amazing service, fast delivery, and high quality assignments! Truly dependable.',
     },
   ]
 
-  return (
-    <section className="bg-gray-50 py-16">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-[#1a3a5c] mb-4">MyassignmenthelP.MY Reviews</h2>
-        <p className="text-center text-gray-600 mb-12">See what our satisfied customers say about us</p>
+  const [index, setIndex] = useState(0)
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {reviews.map((review, idx) => (
-            <div key={idx} className="bg-white p-6 rounded-lg border border-gray-200">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold">
-                  {review.name.charAt(0)}
-                </div>
-                <div>
-                  <p className="font-bold text-[#1a3a5c]">{review.name}</p>
-                  <p className="text-yellow-500 text-sm">{"⭐".repeat(Math.floor(review.rating))}</p>
+  const next = () => setIndex((i) => (i + 1) % reviews.length)
+  const prev = () => setIndex((i) => (i - 1 + reviews.length) % reviews.length)
+
+  const visible = [
+    reviews[index],
+    reviews[(index + 1) % reviews.length],
+    reviews[(index + 2) % reviews.length],
+  ]
+
+  return (
+    <section className="bg-[#f5f5f5] py-16">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* TITLE */}
+        <h2 className="text-center text-3xl font-bold mb-1">
+          MyAssignmentHelp.MY Reviews
+        </h2>
+        <p className="text-center text-gray-500 mb-12">
+          Happy Clients & Feedbacks
+        </p>
+
+        {/* 3 SLIDES */}
+        <div className="flex justify-center gap-6 mb-8 flex-wrap">
+          {visible.map((r, i) => (
+            <div
+              key={i}
+              className="bg-white border border-[#eaeaea] w-[290px] p-6 relative shadow-sm"
+            >
+              {/* EXACT SAME RED QUOTE (❝) */}
+              <div className="absolute -top-3 left-6 text-[#ff3c2e] text-[64px] leading-none">
+                “
+              </div>
+
+              {/* CONTENT */}
+              <div className="mt-4">
+                <div className="flex items-start gap-4">
+                  {/* IMAGE */}
+                  <img
+                    src={r.img}
+                    alt={r.name}
+                    className="w-14 h-14 rounded-full object-cover"
+                  />
+
+                  {/* TEXT + NAME */}
+                  <div>
+                    <p className="text-gray-700 text-sm leading-normal">
+                      {r.text}
+                    </p>
+
+                    <div className="mt-4">
+                      <p className="font-semibold text-gray-900 text-[15px]">
+                        {r.name}
+                      </p>
+                      <p className="text-gray-400 text-xs">{r.location}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <p className="text-gray-600 text-sm italic">"{review.text}"</p>
             </div>
           ))}
+        </div>
+
+        {/* BOTTOM ARROWS */}
+        <div className="flex justify-center gap-8">
+          <button
+            onClick={prev}
+            className="text-gray-500 hover:text-gray-800 transition"
+          >
+            <ChevronLeft size={18} />
+          </button>
+
+          <button
+            onClick={next}
+            className="text-gray-500 hover:text-gray-800 transition"
+          >
+            <ChevronRight size={18} />
+          </button>
         </div>
       </div>
     </section>

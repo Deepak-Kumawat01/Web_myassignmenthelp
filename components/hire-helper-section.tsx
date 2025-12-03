@@ -1,55 +1,112 @@
+'use client'
+
 export default function HireHelperSection() {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white pt-16 pb-40">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <img src="/homework-helper-team.jpg" alt="Homework Helper" className="rounded-lg w-full" />
+        <div className="grid md:grid-cols-2 gap-10 ">
+          {/* LEFT IMAGE WITH FLOAT ANIMATION */}
+          <div className="relative mt-20">
+            <img
+              src="/assignment-help-in-malaysia.jpg"
+              alt="Homework Helper"
+              className=" w-full shadow-lg animate-float"
+            />
           </div>
 
+          {/* RIGHT CONTENT */}
           <div>
-            <h2 className="text-4xl font-bold text-[#1a3a5c] mb-4">
-              Hire Our Homework Helper Malaysia <span className="text-orange-500">For Best Assignment Help</span>
+            <h2 className="text-3xl font-bold text-black leading-snug mb-5">
+              Hire Our Homework Helper Malaysia{' '}
+              <span className="text-[#ff3c2e]">For Best Assignment Help</span>
             </h2>
 
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Our team of homework helpers in Malaysia are highly trained professionals with extensive experience in
-              academic writing. We understand the challenges students face and are committed to providing top-notch
-              assignment help services. Whether you need assistance with essays, dissertations, case studies, or
-              research papers, our experts are ready to help.
+            <p className=" text-black leading-relaxed mb-5">
+              MyAssignmentHelp.my is an authentic company providing reliable and
+              genuine services in Malaysia, be it an individual project or a
+              group-based one. The homework helpers we have are professionals in
+              their respective fields.
             </p>
 
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              We have been serving students across Malaysia for years and have built a strong reputation for delivering
-              quality work on time. Our homework helpers are available 24/7 to assist you with any academic writing
-              task. We guarantee 100% original, plagiarism-free content that meets all your requirements.
+            <p className=" text-black leading-relaxed mb-5">
+              We have a team of experienced and qualified assignment writers
+              Malaysia who can provide you with online homework help on a
+              variety of subjects. So whether you need help with your Math
+              homework or your Science homework, we can definitely help you out.
             </p>
 
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                <span className="text-gray-700">Expert writers with years of experience</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                <span className="text-gray-700">Guaranteed on-time delivery</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                <span className="text-gray-700">100% plagiarism-free content</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                <span className="text-gray-700">24/7 customer support</span>
-              </li>
-            </ul>
-
-            <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded font-semibold transition">
-              HIRE OUR EXPERTS
-            </button>
+            <p className=" text-black leading-relaxed mb-5">
+              You can check some of the assignment samples written by us by
+              clicking on the link. Avail affordable services from our online
+              assignment helper Malaysia and get your work done TODAY! The
+              majority of students from Malacca, Kuala Lumpur, Kuching,
+              GeorgeTown, Ipoh, Johor Bahru, Shah Alam, and other Malaysian
+              towns come to us for online assignment services.
+            </p>
           </div>
         </div>
       </div>
+
+      <div className="max-w-6xl mx-auto px-4 -mb-60 mt-10 z-10 relative">
+        {/* CTA BOX */}
+        <div className="bg-[#112042] text-white rounded-xl shadow-lg px-10 py-8 flex flex-col md:flex-row items-center justify-between gap-8">
+          {/* LEFT SIDE TEXT */}
+          <div className="flex-1">
+            <h2 className="text-2xl font-semibold leading-snug mb-4">
+              Facing Issues with Assignments?
+              <br /> Talk to Our Experts Now!
+            </h2>
+
+            <button className="bg-[#ff3c2e] hover:bg-[#e22a1b] text-white px-5 py-2 rounded-md text-sm font-semibold transition">
+              Request a Call Back
+            </button>
+          </div>
+
+          {/* RIGHT SIDE: APP STORE + GOOGLE PLAY + QR */}
+          <div className="flex items-center gap-6">
+            {/* App Buttons */}
+            <div className="flex flex-col gap-3">
+              <img
+                src="/icon-app-store.webp"
+                className="w-40"
+                alt="App Store"
+              />
+              <img
+                src="/icon-google-store.webp"
+                className="w-40"
+                alt="Google Play"
+              />
+            </div>
+
+            {/* QR CODE */}
+            <div>
+              <img
+                src="/MyAssignmentHelp.png"
+                alt="QR Code"
+                className="w-28 h-28 rounded"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* FLOATING ANIMATION STYLE */}
+      <style jsx>{`
+        @keyframes float {
+          0% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-12px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+        .animate-float {
+          animation: float 4s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   )
 }

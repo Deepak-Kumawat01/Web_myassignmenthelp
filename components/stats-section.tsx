@@ -20,11 +20,11 @@ export default function StatsSection() {
         </p>
 
         {/* Stats Boxes */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 ">
           {stats.map((stat, idx) => (
             <div
               key={idx}
-              className="border border-white/20 py-10 px-6 text-center rounded-md"
+              className="border border-white/20 py-10 px-6 text-center hover:border hover:border-red-500"
             >
               {/* Big White Number */}
               <div className="text-5xl font-semibold mb-3">{stat.number}</div>

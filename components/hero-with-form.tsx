@@ -2,16 +2,19 @@ import Image from 'next/image'
 
 export default function HeroWithForm() {
   return (
-    <section className="bg-white py-12">
-      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+    <section className="bg-white py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-start">
         {/* LEFT CONTENT */}
         <div>
-          <h1 className="text-4xl font-extrabold leading-snug text-[#0c1c33] mb-4">
+          <h1
+            className="text-[36px] font-semibold text-[#0d1f42] leading-[42px] mb-5"
+            style={{ fontFamily: 'Roboto, sans-serif' }}
+          >
             Best Assignment Helper Malaysia | <br />
             Trusted, Affordable & Fast Delivery
           </h1>
 
-          <p className="text-black font-normal text-base leading-relaxed mb-6">
+          <p className="text-[16px] leading-[26px] mb-7">
             My Assignment Help Malaysia is a leading assignment helper in
             Malaysia. We provide 100% AI-free assignment help to Malaysian
             students at all levels—from high school to university. Our team
@@ -24,249 +27,194 @@ export default function HeroWithForm() {
           </p>
 
           {/* Feature Boxes */}
-          <div className="grid grid-cols-2 gap-4 mb-6">
-            <div className="bg-red-100 p-4 rounded-md flex items-center gap-3">
+          <div className="grid grid-cols-2 gap-4 mb-10">
+            <div className="bg-[#f8d7da] px-4 py-3 rounded-md flex items-center gap-3">
               <Image
                 src="/turnitin-report.png"
                 alt="Turnitin"
                 width={32}
                 height={32}
               />
-              <p className="font-semibold text-[#212529] text-[1rem]">
+              <p className="font-semibold text-[#212529] text-[15px]">
                 Turnitin Report
               </p>
             </div>
 
-            <div className="bg-indigo-100 p-4 rounded-md flex items-center gap-3">
+            <div className="bg-[#dbe4ff] px-4 py-3 rounded-md flex items-center gap-3">
               <Image
                 src="/100-plagiarism-free.png"
-                alt="Turnitin"
+                alt="Plagiarism Free"
                 width={32}
                 height={32}
               />
-              <p className="font-semibold text-[#212529] text-[1rem]">
+              <p className="font-semibold text-[#212529] text-[15px]">
                 100% Plagiarism Free
               </p>
             </div>
 
-            <div className="bg-green-100 p-4 rounded-md flex items-center gap-3">
+            <div className="bg-[#d1f7d6] px-4 py-3 rounded-md flex items-center gap-3">
               <Image
                 src="/proofreading-editing.png"
-                alt="Proofreading and Editing"
+                alt="Reading Service"
                 width={32}
                 height={32}
               />
-              <p className="font-semibold text-[#212529] text-[1rem]">
+              <p className="font-semibold text-[#212529] text-[15px]">
                 With Assignment Pre-Reading Service
               </p>
             </div>
 
-            <div className="bg-yellow-100 p-4 rounded-md flex items-center gap-3">
+            <div className="bg-[#fff3cd] px-4 py-3 rounded-md flex items-center gap-3">
               <Image
                 src="/a-pluse-guaranteed.png"
-                alt="Plus Guaranteed"
+                alt="A+ Guaranteed"
                 width={32}
                 height={32}
               />
-              <p className="font-semibold text-[#212529] text-[1rem]">
+              <p className="font-semibold text-[#212529] text-[15px]">
                 A+ Guaranteed
               </p>
             </div>
           </div>
 
-          {/* Trust Badges Bar */}
-          <div className="bg-[#0c1c33] rounded-md mt-8 px-6 py-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {/* Trustpilot */}
-            <div className="flex items-center gap-3 py-4 sm:pr-6 lg:pr-8 border-b sm:border-b-0 sm:border-r border-white/20">
+          <div className="bg-[#0c1c33] px-2 py-6 grid grid-cols-1 sm:grid-cols-3">
+            {/* ITEM 1 */}
+            <div className="flex items-center gap-2 py-4 sm:py-0 sm:pr-6 sm:border-r sm:border-white/30">
               <img
                 src="/trust-pilot.png"
                 alt="Trustpilot"
-                className="w-12 h-12 object-contain"
+                className="w-12 h-12"
               />
               <div>
-                <p className="text-white text-lg font-semibold">Trustpilot</p>
+                <p className="text-white font-semibold">Trustpilot</p>
                 <p className="text-[#ff3b30] text-sm">★★★★★</p>
               </div>
             </div>
 
-            {/* Site Jabber */}
-            <div className="flex items-center gap-3 py-4 sm:pl-6 sm:pr-6 lg:px-8 border-b sm:border-b-0 lg:border-r border-white/20">
+            {/* ITEM 2 */}
+            <div className="flex items-center gap-2 py-4 sm:py-0 sm:px-6 sm:border-r sm:border-white/30">
               <img
                 src="/site-jabber-reviews.jpg"
                 alt="Site Jabber"
-                className="w-12 h-12 object-contain"
+                className="w-12 h-12"
               />
               <div>
-                <p className="text-white text-lg font-semibold">Site Jabber</p>
+                <p className="text-white font-semibold">Site Jabber</p>
                 <p className="text-[#ff3b30] text-sm">★★★★★</p>
               </div>
             </div>
 
-            {/* MAH Reviews */}
-            <div className="flex items-center gap-3 py-4 sm:pl-6 lg:pl-8">
+            {/* ITEM 3 */}
+            <div className="flex items-center gap-2 py-4 sm:py-0 sm:pl-6">
               <img
                 src="/reviews_rating.png"
                 alt="MAH Reviews"
-                className="w-12 h-12 object-contain"
+                className="w-12 h-12"
               />
               <div>
-                <p className="text-white text-lg font-semibold">MAH Reviews</p>
+                <p className="text-white font-semibold">MAH Reviews</p>
                 <p className="text-[#ff3b30] text-sm">★★★★★</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* RIGHT SIDE FORM */}
-        <div className="bg-white shadow-lg rounded-md border border-gray-200">
-          {/* TOP DARK BLUE HEADING */}
-          <div className="bg-[#0d1f42] text-white text-center py-3 rounded-t-md font-semibold">
+        {/* RIGHT FORM — exact height as screenshot (small) */}
+        <div
+          className="bg-white shadow-[0_8px_20px_rgba(0,0,0,0.1)] border border-[#e5e7eb] w-full max-w-auto"
+          style={{ fontFamily: 'Roboto, sans-serif' }}
+        >
+          <div className="bg-[#0d1f42] text-white text-center py-4 text-[18px] font-semibold">
             Hire An Assignment Helper
           </div>
 
-          <form className="p-6 grid grid-cols-2 gap-4">
-            {/* NAME */}
-            <div>
-              <label className="text-xs font-semibold text-gray-700 mb-1 block">
-                Enter Your Name
-              </label>
-              <input
-                type="text"
-                placeholder="Enter Your Name"
-                className="w-full px-3 py-2 border border-gray-300 rounded text-sm"
-              />
-            </div>
+          <form className="p-6 grid grid-cols-2 gap-3 text-[14px] text-[#212529]">
+            <input
+              type="text"
+              placeholder="Enter Your Name"
+              className="w-full border border-[#ced4da] rounded px-3 h-[40px]"
+            />
 
-            {/* EMAIL */}
-            <div>
-              <label className="text-xs font-semibold text-gray-700 mb-1 block">
-                Enter Your Email
-              </label>
-              <input
-                type="email"
-                placeholder="Enter Your Email"
-                className="w-full px-3 py-2 border border-gray-300 rounded text-sm"
-              />
-            </div>
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              className="w-full border border-[#ced4da] rounded px-3 h-[40px]"
+            />
 
-            {/* COUNTRY */}
-            <div>
-              <label className="text-xs font-semibold text-gray-700 mb-1 block">
-                Country Code
-              </label>
-              <select className="w-full px-3 py-2 border border-gray-300 rounded text-sm">
-                <option>Malaysia (+60)</option>
-              </select>
-            </div>
+            <select className="w-full border border-[#ced4da] rounded px-3 h-[40px] bg-white">
+              <option>Malaysia (+60)</option>
+            </select>
 
-            {/* CONTACT */}
-            <div>
-              <label className="text-xs font-semibold text-gray-700 mb-1 block">
-                Enter Contact
-              </label>
-              <input
-                type="text"
-                placeholder="Enter Contact"
-                className="w-full px-3 py-2 border border-gray-300 rounded text-sm"
-              />
-            </div>
+            <input
+              type="text"
+              placeholder="Enter Contact"
+              className="w-full border border-[#ced4da] rounded px-3 h-[40px]"
+            />
 
-            {/* PAPER LENGTH */}
-            <div>
-              <label className="text-xs font-semibold text-gray-700 mb-1 block">
-                Paper Length
-              </label>
-              <select className="w-full px-3 py-2 border border-gray-300 rounded text-sm">
-                <option>Select Paper Length</option>
-              </select>
-            </div>
+            <select className="w-full border border-[#ced4da] rounded px-3 h-[40px] bg-white">
+              <option>Paper length</option>
+            </select>
 
-            {/* EDUCATION LEVEL */}
-            <div>
-              <label className="text-xs font-semibold text-gray-700 mb-1 block">
-                Education Level
-              </label>
-              <select className="w-full px-3 py-2 border border-gray-300 rounded text-sm">
-                <option>Select Education Level</option>
-              </select>
-            </div>
+            <select className="w-full border border-[#ced4da] rounded px-3 h-[40px] bg-white">
+              <option>Education Level</option>
+            </select>
 
-            {/* DEADLINE */}
-            <div>
-              <label className="text-xs font-semibold text-gray-700 mb-1 block">
-                Deadline
-              </label>
-              <select className="w-full px-3 py-2 border border-gray-300 rounded text-sm">
-                <option>Select Deadline</option>
-              </select>
-            </div>
+            <select className="w-full border border-[#ced4da] rounded px-3 h-[40px] bg-white">
+              <option>Deadline</option>
+            </select>
 
-            {/* SUBJECT */}
-            <div>
-              <label className="text-xs font-semibold text-gray-700 mb-1 block">
-                Subject Name
-              </label>
-              <input
-                type="text"
-                placeholder="Enter Subject Name"
-                className="w-full px-3 py-2 border border-gray-300 rounded text-sm"
-              />
-            </div>
+            <input
+              type="text"
+              placeholder="Subject Name"
+              className="w-full border border-[#ced4da] rounded px-3 h-[40px]"
+            />
 
-            {/* REFERENCING STYLE */}
-            <div>
-              <label className="text-xs font-semibold text-gray-700 mb-1 block">
-                Referencing Style
-              </label>
-              <select className="w-full px-3 py-2 border border-gray-300 rounded text-sm">
-                <option>Select Referencing Style</option>
-              </select>
-            </div>
+            <select className="w-full border border-[#ced4da] rounded px-3 h-[40px] bg-white">
+              <option>Referencing Style</option>
+            </select>
 
-            {/* PAPER TYPE */}
-            <div>
-              <label className="text-xs font-semibold text-gray-700 mb-1 block">
-                Paper Type
-              </label>
-              <select className="w-full px-3 py-2 border border-gray-300 rounded text-sm">
-                <option>Select Paper Type</option>
-              </select>
-            </div>
+            <select className="w-full border border-[#ced4da] rounded px-3 h-[40px] bg-white">
+              <option>Paper Type</option>
+            </select>
 
-            {/* QUESTION */}
-            <div className="col-span-2">
-              <label className="text-xs font-semibold text-gray-700 mb-1 block">
-                Enter Question
-              </label>
-              <textarea
-                placeholder="Type your question..."
-                rows={3}
-                className="w-full px-3 py-2 border border-gray-300 rounded text-sm"
-              ></textarea>
-            </div>
+            <textarea
+              rows={3}
+              placeholder="Enter Question"
+              className="col-span-2 w-full border border-[#ced4da] rounded px-3 py-2"
+            ></textarea>
 
-            {/* FILE UPLOAD */}
-            <div className="col-span-2">
-              <label className="text-xs font-semibold text-gray-700 mb-1 block">
-                Upload File
-              </label>
-              <div className="border border-gray-300 rounded px-3 py-2">
-                <input type="file" className="text-sm" />
-              </div>
-            </div>
+            <div className="col-span-2 flex items-center justify-between">
+              {/* CUSTOM FILE INPUT */}
+              <label className="flex items-center rounded cursor-pointer overflow-hidden h-[38px]">
+                {/* LEFT BUTTON (Choose File) */}
+                <span className="bg-[#e9ecef] text-[#212529] px-4 py-1 text-[14px] border border-gray-400">
+                  Choose File
+                </span>
 
-            <div className="col-span-2 flex items-center justify-end">
+                {/* ACTUAL FILE INPUT HIDDEN */}
+                <input
+                  type="file"
+                  className="hidden"
+                  onChange={(e) => console.log(e.target.files[0])}
+                />
+
+                {/* FILE NAME TEXT */}
+                <span className="px-3 text-[14px] text-[#212529]">
+                  No file chosen
+                </span>
+              </label>
+
+              {/* ADD MORE BUTTON */}
               <button
                 type="button"
-                className="bg-gray-700 text-white text-xs px-4 py-1 rounded"
+                className="bg-[#212529] text-white px-4 py-1 rounded text-[13px]"
               >
                 Add More
               </button>
             </div>
 
-            {/* SUBMIT BUTTON */}
-            <div className="col-span-2 flex justify-center">
-              <button className="bg-[#d84436] hover:bg-[#c63a2f] text-white px-10 py-2 rounded font-semibold text-sm transition">
+            <div className="col-span-2 flex justify-center mt-3">
+              <button className="bg-[#d84436] hover:bg-[#c63a2f] text-white px-10 py-2 rounded text-[15px] font-semibold transition">
                 Order Now
               </button>
             </div>

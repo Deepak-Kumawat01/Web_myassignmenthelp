@@ -1,62 +1,170 @@
+'use client'
+
+import Image from 'next/image'
+import clsx from 'clsx'
+import { useEffect, useRef } from 'react'
+
 export default function QuickAssistanceGrid() {
+  const btnRef = useRef<any>(null)
+
+  // CTA animation
+  useEffect(() => {
+    const button = btnRef.current
+    let interval: NodeJS.Timeout | undefined = undefined
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Initial animation instantly
+            button.classList.add('cta-animate')
+            setTimeout(() => button.classList.remove('cta-animate'), 1500)
+
+            // Loop animation every 5 sec
+            interval = setInterval(() => {
+              button.classList.add('cta-animate')
+              setTimeout(() => button.classList.remove('cta-animate'), 1500)
+            }, 5000)
+          } else {
+            clearInterval(interval)
+          }
+        })
+      },
+      { threshold: 0.5 },
+    )
+
+    if (button) observer.observe(button)
+
+    return () => {
+      observer.disconnect()
+      clearInterval(interval)
+    }
+  }, [])
+
   const services = [
     {
-      icon: "👨‍💼",
-      title: "24/7 Customer Support",
-      description: "Have an issue? Contact our customer care team and we'll respond within minutes to help you out.",
-    },
-    {
-      icon: "📚",
-      title: "Free Resources",
-      description: "Get free study materials, samples and guidelines to help you with your academic journey.",
-    },
-    {
-      icon: "⚡",
-      title: "Timely Delivery",
-      description: "We deliver your assignment well before the deadline so you have time to review.",
-    },
-    {
-      icon: "📄",
-      title: "Plagiarism-Free Content",
+      icon: '/24-7-customer-support.svg',
+      title: '24/7 Customer Support',
       description:
-        "All content is checked with advanced tools to ensure 100% original, unique, and plagiarism-free work.",
+        'Our Malaysian assignment experts offer round-the-clock customer support. Contact us anytime for help.',
+      card: false,
     },
     {
-      icon: "🎖️",
-      title: "High-Quality Assignments",
-      description: "Our expert writers ensure top-notch quality assignments that will help you score excellent grades.",
+      icon: '/free-revisions.svg',
+      title: 'Free Revisions',
+      description:
+        "If you're not happy with the first draft of your assignment, get it revised for free.",
+      card: true,
     },
     {
-      icon: "💰",
-      title: "Affordable Prices",
-      description: "We offer competitive and pocket-friendly prices for all types of assignment writing services.",
+      icon: '/timely-delivery.svg',
+      title: 'Timely Delivery',
+      description:
+        'We ensure assignments are delivered on time, even with tight deadlines.',
+      card: false,
+    },
+    {
+      icon: '/plagiarism-free-content.svg',
+      title: 'Plagiarism-Free Content',
+      description:
+        'All assignments are 100% original, checked with advanced plagiarism tools.',
+      card: true,
+    },
+    {
+      icon: '/high-quality-assignments.svg',
+      title: 'High-Quality Assignments',
+      description:
+        'Experienced academic writers deliver the best quality assignments.',
+      card: false,
+    },
+    {
+      icon: '/affordable-prices.svg',
+      title: 'Affordable Prices',
+      description: 'Get assignments done at budget-friendly prices.',
+      card: true,
     },
   ]
 
   return (
-    <section className="bg-gray-50 py-16">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-[#1a3a5c] mb-4">
+    <section className="relative bg-white py-20 overflow-hidden">
+      {/* LEFT BG SVG */}
+      <div className="absolute left-0 top-0 h-full w-40 opacity-30 pointer-events-none">
+        <Image
+          src="/quick-assignment-writting-assistance.svg"
+          alt="bg"
+          fill
+          className="object-contain"
+        />
+      </div>
+
+      {/* RIGHT BG SVG */}
+      <div className="absolute right-0 top-0 h-full w-40 opacity-30 pointer-events-none">
+        <Image
+          src="/quick-assignment-writing-assistance-from-malaysian.svg"
+          alt="bg"
+          fill
+          className="object-contain"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <h2 className="text-3xl font-bold text-center text-black mb-4">
           Quick Assignment Writing Assistance From Malaysian Assignment Helpers
         </h2>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Get expert help from certified Malaysian writers with years of experience in academic writing across all
-          subjects.
+
+        <p className="text-center text-black font-normal mb-12 max-w-5xl mx-auto">
+          MyAssignmentHelp.My is a leading online assignment help provider in
+          Malaysia that offers quality assignment writing services to
+          students.Our company has a team of experienced and qualified writers
+          who can help you with all your assignment needs. Here are some of the
+          features that make MyAssignmentHelp.My the best choice for your
+          assignment help needs:
         </p>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {services.map((service, idx) => (
-            <div key={idx} className="bg-white p-8 rounded-lg text-center">
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="font-bold text-[#1a3a5c] mb-3">{service.title}</h3>
-              <p className="text-gray-600 text-sm">{service.description}</p>
+        {/* GRID (pattern matches your website) */}
+        {/* GRID WRAPPED INSIDE SAME WIDTH AS H2 */}
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-10 mt-10">
+          {services.map((service, i) => (
+            <div
+              key={i}
+              className={clsx(
+                'p-8 text-center flex flex-col items-center',
+                service.card
+                  ? 'bg-white shadow-[0_4px_20px_rgba(0,0,0,0.12)] rounded-md border border-gray-100'
+                  : 'bg-transparent',
+              )}
+            >
+              {/* ICON */}
+              <div className="mb-5 flex justify-center">
+                <Image
+                  src={service.icon}
+                  width={70}
+                  height={70}
+                  alt={service.title}
+                  className="object-contain"
+                />
+              </div>
+
+              {/* TITLE */}
+              <h3 className="text-lg font-bold text-[#1a3a5c] mb-3">
+                {service.title}
+              </h3>
+
+              {/* DESCRIPTION */}
+              <p className="text-gray-600 text-sm leading-relaxed max-w-[240px]">
+                {service.description}
+              </p>
             </div>
           ))}
         </div>
 
+        {/* CTA BUTTON */}
         <div className="text-center mt-12">
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded font-semibold transition">
-            GET INSTANT HELP
+          <button
+            ref={btnRef}
+            className="px-8 py-4 tracking-wide bg-[#e3431b] text-white rounded-full font-semibold shadow-xl hover:shadow-2xl transition"
+          >
+            ORDER NOW..!!
           </button>
         </div>
       </div>

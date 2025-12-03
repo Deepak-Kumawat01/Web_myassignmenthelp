@@ -14,7 +14,7 @@ export default function DiscountBanner() {
           </div>
 
           {/* RIGHT CTA BUTTON BOX */}
-          <button className="bg-white text-[#d73b2c] text-[1rem] font-semibold px-10 py-4 rounded-md shadow-sm hover:shadow-md transition">
+          <button className="bg-white text-[#d73b2c] text-[1rem] font-semibold px-20 py-4 rounded-md shadow-sm hover:shadow-md transition">
             CONTACT US NOW!
           </button>
         </div>
